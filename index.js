@@ -23,6 +23,9 @@ jsonString=JSON.stringify(iusers1)
     }
 })
 }
+app.get('/',(req,res)=>{
+  res.json({...iusers1})
+})
 app.get('/getuser/:moboremail', (req, res) => {
     iusers1.forEach(u=>{
       u.forEach(user=>{
